@@ -15,5 +15,5 @@ app.get('/',(req,res)=>{
     console.log('index in runnning')
     res.render('index')
 })
-app.listen(3232,"0.0.0.0",()=>{
+app.listen(80,"0.0.0.0",()=>{
     console.log('listening  bank bot')})
