@@ -15,5 +15,5 @@ app.get('/',(req,res)=>{
     console.log('index in runnning')
     res.render('index')
 })
-app.listen(process.env.PORT||8080,()=>{
+app.listen(process.env.PORT||3232,()=>{
     console.log('listening  bank bot')})
