@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 
 app.get('/',(req,res)=>{
+    console.log('index in running')
     res.render('index')
 })
 app.listen(8080,()=>{
