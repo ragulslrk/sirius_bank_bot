@@ -15,4 +15,4 @@ app.get('/',(req,res)=>{
     res.render('index')
 })
 app.listen(process.env.PORT ||3232,()=>{
-    console.log("listening sirius bank")})
+    console.log('listening '+ process.env.PORT )})
