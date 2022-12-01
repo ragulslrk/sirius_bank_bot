@@ -14,5 +14,5 @@ app.use(bodyParser.json());
 app.get('/',(req,res)=>{
     res.render('index')
 })
-app.listen(process.env.PORT ||3232,()=>{
-    console.log('listening '+ process.env.PORT )})
+app.listen(8080,()=>{
+    console.log('listening  bank bot')})
