@@ -16,4 +16,4 @@ app.get('/',(req,res)=>{
     res.render('index')
 })
 app.listen(80,"0.0.0.0",()=>{
-    console.log('listening  bank bot')})
+    console.log('listening  bank bots')})
