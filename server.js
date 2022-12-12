@@ -26,5 +26,30 @@ app.get('/',(req,res)=>{
     res.render('index')
 })
 
+// route to verify  user 
+const verify_user=require('./controller/verify_otp') 
+app.use(verify_user)
+//route  to login 
+const login =require('./controller/login')
+app.use(login)
 
+//route  get balance 
+const get_balance=require('./controller/get_balance')
+app.use(get_balance)
 
+//route  to  withdraw
+const  withdraw=require('./controller/withdraw')
+app.use(withdraw)
+
+//route  to view_transaction
+const  view_transaction=require('./controller/view_transaction')
+
+app.use(view_transaction)
+
+//route to  change  pin 
+const change_pin=require('./controller/change_pin')
+app.use(change_pin)
+
+//route  to money  transfer
+const transfer=require('./controller/money _transfer')
+app.use(transfer)

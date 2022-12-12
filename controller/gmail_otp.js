@@ -7,7 +7,7 @@ const emailTemplateSource = fs.readFileSync(path.join(__dirname, "/gmail.hbs"), 
 
 const gmail_otp=(otp,username,email)=>{
     let transporter = {
-        service: 'hotmail',
+        service: 'gmail',
         auth: {
         user:process.env.user ,
         pass:process.env.pass,
@@ -18,20 +18,19 @@ const gmail_otp=(otp,username,email)=>{
     const htmlToSend = template({user:username,otp:otp})
 
         const mailOptions = {
-         from:'sheldon.chatbot@hotmail.com',
+         from:'siriusbankbot.info@gmail.com',
         to:email,
-        subject: `OTP for Change Pin(Sheldon Bank)`,
+        subject: `OTP for Login (Sirius Bank)`,
         html: htmlToSend
             }
             smtpTransport.sendMail(mailOptions, function (err, info) {
                 if (err) {
-                    console.log('hotmail')
+                    console.log('gmail sent')
                   console.log(err);
-                  res.sendStatus(400)
                 } else {
-                    result.save()
-                    res.send('mail sent')
-                   
+                    return 
                 }
               });
 }
+
+module.exports=gmail_otp
