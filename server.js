@@ -53,3 +53,25 @@ app.use(change_pin)
 //route  to money  transfer
 const transfer=require('./controller/money _transfer')
 app.use(transfer)
+
+//route  to  buys  stocks
+const  demat_buy_stock=require('./controller/demat_buy_stock.js')
+app.use(demat_buy_stock)
+ 
+
+//route  to  sell stocks
+const demat_sell_stocks=require('./controller/demat_sell_stocks')
+app.use(demat_sell_stocks)
+
+//route to bidirectional transfer btw trading and  saving account
+const demat_transfer=require('./controller/demat_transfer')
+app.use(demat_transfer)
+
+//route to block and unblock cc
+const  block=require('./controller/block_card')
+app.use(block)
+
+//route to card bill 
+
+const bill=require('./controller/card_bill')
+app.use(bill)
