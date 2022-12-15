@@ -4,7 +4,7 @@ const msg_otp=(otp,phone)=>{
 var req = unirest("GET", "https://www.fast2sms.com/dev/bulkV2");
 
 req.query({
-  "authorization": "64rPcoiYAknJFaxmlqebB9UgTSu0Z2QhO5VRMdX713KsLHDwvNlX58hHu7UybkpejnIx2L14mSVGf9Ft",
+  "authorization": "CHSz21vplxkZEJE90hPfSFCeML65SJgDL5y5G9ZAeuL7N16HsOlM7ZDW8KvN",
   "sender_id": "TXTIND",
   "message": `Your Otp is ${otp}.` ,
   "route": "v3",

@@ -10,6 +10,7 @@ const msg_otp=require('./msg_otp')
     user.findOne({username:req.body.username})
     .then(result=>{
         otp=generateOTP()
+        console.log(otp);
         result.otp_change_pin=otp
         if(req.body.option === "1")
         {
