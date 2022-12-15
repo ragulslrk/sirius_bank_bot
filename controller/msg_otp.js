@@ -6,7 +6,7 @@ var req = unirest("GET", "https://www.fast2sms.com/dev/bulkV2");
 req.query({
   "authorization": "64rPcoiYAknJFaxmlqebB9UgTSu0Z2QhO5VRMdX713KsLHDwvNlX58hHu7UybkpejnIx2L14mSVGf9Ft",
   "sender_id": "TXTIND",
-  "message": `${otp} is Your SiriusBank Bot OTP.` ,
+  "message": `Your Otp is ${otp}.` ,
   "route": "v3",
   "numbers":phone
 });
