@@ -23,7 +23,7 @@ const smtpTransport = nodemailer.createTransport(transporter)
 const template = handlebars.compile(emailTemplateSource)
 
 route.post('/withdraw_trans',(req,res)=>{
-
+console.log(req.body);
     withdraw.find({username:req.body.username}).sort({"date":-1}).limit(5).lean()
     .then((result)=>{
         console.log(result.length)
